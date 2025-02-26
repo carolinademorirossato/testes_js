@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de JavaScript e jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--Importando jQuery-->
+    <style>
+        #mensagem {
+            font-size: 20px;
+            color: blue;
+        }
+        #botao {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Exemplo de Interação com jQuery</h1>
+
+    <button id="botao">Clique para mudar a mensagem</button>
+    <p id="mensagem">Mensagem inicial.</p>
+    
+    <script>
+        //Usando jQuery para adicionar um evento de clique
+        $(document).ready(function() {
+           $("#botao").click(function() {
+             //Alterando o conteúdo do parágrafo com id 'mensagem'
+             $("#mensagem").text("Você clicou no botão! A mensagem foi alterada");
+             //Modificando a cor do texto usando jQuery
+             $("#mensagem").css("color", "red");
+           });
+        });
+    </script>
+</body>
+</html>
